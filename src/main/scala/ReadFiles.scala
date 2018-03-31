@@ -39,7 +39,7 @@ object ReadFiles {
     x.renameTo(getSrcAndDest(origPath, x))
   }
 
-  def getSrcAndDest(origPath: String, file: File) = {
+  def getSrcAndDest(origPath: String, file: File): File = {
     new File(s"${origPath}/${file.getName}")
   }
 
