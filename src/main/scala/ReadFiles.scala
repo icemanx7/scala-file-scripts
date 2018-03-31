@@ -1,6 +1,7 @@
 import java.io.File
 
 import scala.annotation.tailrec
+import scala.util.Try
 
 object ReadFiles {
 
@@ -18,7 +19,7 @@ object ReadFiles {
   }
 
   def getCommandArgs(cArgs: Array[String]): Option[(String, String)] = {
-    Some(cArgs(0), cArgs(1))
+    Try((cArgs(0), cArgs(1))).toOption
   }
 
   def initMove(cArgs: Array[String]): Unit = {
