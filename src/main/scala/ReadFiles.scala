@@ -35,7 +35,6 @@ object ReadFiles {
     }
   }
 
-
   def moveToSuppliedFolder(origPath: String, list: List[File]): Unit = list.map { x =>
     x.renameTo(getSrcAndDest(origPath, x))
   }
